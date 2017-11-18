@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 function forLoop (array) {
@@ -6,6 +7,15 @@ function forLoop (array) {
 
     if (i === 1) {
       array[i-1] = `"I am ${i} strange loop"`;
+=======
+const array = [];
+
+function forLoop (array) {
+  for (let i = 1; i < 26; i++) {
+
+    if (i === 1) {
+      array[i-1] = `"I am a strange loop"`;
+>>>>>>> 2a1ed210fef568bfe49d00e37a706d76375aac94
     }
 
     else if ((1 < i) && (i < 26)) {
