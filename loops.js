@@ -1,21 +1,8 @@
-<<<<<<< HEAD
-
-
-function forLoop (array) {
-
-  for (let i = 1; i < 26; i++) {
-
-    if (i === 1) {
-      array[i-1] = `"I am ${i} strange loop"`;
-=======
-const array = [];
-
 function forLoop (array) {
   for (let i = 1; i < 26; i++) {
 
     if (i === 1) {
       array[i-1] = `"I am a strange loop"`;
->>>>>>> 2a1ed210fef568bfe49d00e37a706d76375aac94
     }
 
     else if ((1 < i) && (i < 26)) {
@@ -41,9 +28,22 @@ function whileLoop(n) {
   }
 }
 
+function whileLoop(n) {
+  while (n > 0) {
+    console.log(--n)
+  }
+
+  return 'done'
+}
+
 function doWhileLoop(array) {
+  function maybeTrue() {
+    return Math.random() >= 0.5
+  }
+
   do {
-    array.shift(1)
-  } while (array.length > 0)
-  return array;
+    array = array.slice(1)
+  } while (array.length > 0 && maybeTrue())
+
+  return array
 }
